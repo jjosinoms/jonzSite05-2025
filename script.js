@@ -96,7 +96,7 @@ const projetosData = [
         link: "https://github.com/jjosinoms/SegurMais"
     },
     {
-        nome: "FGV",
+        nome: "Gestão Fornecedores",
         descricao: "Sistema para gerenciamento de projetos com fornecedores",
         tecnologias: ["Next.js", "TypeScript", "PostgreSQL"],
         imagem: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80", // projetos/planejamento
