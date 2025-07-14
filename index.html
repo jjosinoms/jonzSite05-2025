@@ -169,36 +169,94 @@
         </div>
     </section>
 
-    <!-- PROJETOS -->
-    <section id="projetos" class="py-20 bg-gray-800">
+    <!-- Projetos Section com Material Cards -->
+    <section id="projetos" class="py-20 bg-gray-800 fade-in">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold mb-12 text-center gradient-text">Projetos em Destaque</h2>
+            <h2 class="text-4xl font-bold mb-12 text-center">Projetos</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="project-card glass-card p-6 flex flex-col">
-                    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80" alt="Projeto 1" class="rounded-lg mb-4 shadow-md">
-                    <h3 class="text-xl font-bold mb-2">Projeto Incrível</h3>
-                    <div class="flex flex-wrap gap-2 mb-2">
-                        <span class="px-2 py-1 bg-blue-600 rounded text-xs">Angular</span>
-                        <span class="px-2 py-1 bg-purple-600 rounded text-xs">Node.js</span>
+                <div class="project-card mat-card bg-gray-800 p-6 rounded-lg reveal" style="animation-delay: 0s;">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="SegurMais" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-bold text-blue-400 mb-2">SegurMais</h3>
+                    <p class="text-gray-300 mb-4">Sistema em desenvolvimento para gestão de corretores</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-blue-500 bg-opacity-20 text-blue-400 rounded-full text-sm">Node.js</span>
+                        <span class="px-3 py-1 bg-blue-500 bg-opacity-20 text-blue-400 rounded-full text-sm">Angular</span>
+                        <span class="px-3 py-1 bg-blue-500 bg-opacity-20 text-blue-400 rounded-full text-sm">MongoDB</span>
                     </div>
-                    <p class="text-gray-200 mb-4">Sistema web completo para gestão de tarefas e produtividade.</p>
-                    <div class="flex gap-3 mt-auto">
-                        <a href="#" class="project-link" title="Ver no GitHub"><i class="fab fa-github text-2xl"></i></a>
-                        <a href="#" class="project-link" title="Ver Demo"><i class="fas fa-external-link-alt text-2xl"></i></a>
-                    </div>
+                    <a href="https://github.com/jjosinoms/SegurMais" target="_blank" class="mat-button inline-flex items-center text-blue-400 hover:text-blue-300 transition">
+                        <i class="material-icons mr-2">code</i>
+                        Ver no GitHub
+                    </a>
                 </div>
-                <div class="project-card glass-card p-6 flex flex-col">
-                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="Projeto 2" class="rounded-lg mb-4 shadow-md">
-                    <h3 class="text-xl font-bold mb-2">App Mobile</h3>
-                    <div class="flex flex-wrap gap-2 mb-2">
-                        <span class="px-2 py-1 bg-blue-600 rounded text-xs">React Native</span>
-                        <span class="px-2 py-1 bg-pink-600 rounded text-xs">Firebase</span>
+                <div class="project-card mat-card bg-gray-800 p-6 rounded-lg reveal" style="animation-delay: 0.1s;">
+                    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80" alt="Gestão Fornecedores" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-bold text-blue-400 mb-2">Gestão Fornecedores</h3>
+                    <p class="text-gray-300 mb-4">Sistema para gerenciamento de projetos com fornecedores</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-blue-500 bg-opacity-20 text-blue-400 rounded-full text-sm">Next.js</span>
+                        <span class="px-3 py-1 bg-blue-500 bg-opacity-20 text-blue-400 rounded-full text-sm">TypeScript</span>
+                        <span class="px-3 py-1 bg-blue-500 bg-opacity-20 text-blue-400 rounded-full text-sm">PostgreSQL</span>
                     </div>
-                    <p class="text-gray-200 mb-4">Aplicativo para organização pessoal e lembretes inteligentes.</p>
-                    <div class="flex gap-3 mt-auto">
-                        <a href="#" class="project-link" title="Ver no GitHub"><i class="fab fa-github text-2xl"></i></a>
-                        <a href="#" class="project-link" title="Ver Demo"><i class="fas fa-external-link-alt text-2xl"></i></a>
+                    <a href="https://github.com/jjosinoms/FGV" target="_blank" class="mat-button inline-flex items-center text-blue-400 hover:text-blue-300 transition">
+                        <i class="material-icons mr-2">code</i>
+                        Ver no GitHub
+                    </a>
+                </div>
+                <div class="project-card mat-card bg-gray-800 p-6 rounded-lg reveal" style="animation-delay: 0.2s;">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=400&q=80" alt="Controle Financeiro" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-bold text-blue-400 mb-2">Controle Financeiro</h3>
+                    <p class="text-gray-300 mb-4">Sistema de gerenciamento de finanças pessoais</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-blue-500 bg-opacity-20 text-blue-400 rounded-full text-sm">React</span>
+                        <span class="px-3 py-1 bg-blue-500 bg-opacity-20 text-blue-400 rounded-full text-sm">Node.js</span>
+                        <span class="px-3 py-1 bg-blue-500 bg-opacity-20 text-blue-400 rounded-full text-sm">MongoDB</span>
                     </div>
+                    <a href="https://github.com/jjosinoms/ControleFinanceiro" target="_blank" class="mat-button inline-flex items-center text-blue-400 hover:text-blue-300 transition">
+                        <i class="material-icons mr-2">code</i>
+                        Ver no GitHub
+                    </a>
+                </div>
+                <div class="project-card mat-card bg-gray-800 p-6 rounded-lg reveal" style="animation-delay: 0.3s;">
+                    <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80" alt="Agendamento" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-bold text-blue-400 mb-2">Agendamento</h3>
+                    <p class="text-gray-300 mb-4">Aplicação para agendamento de compromissos e eventos, com interface intuitiva e integração com calendário.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-blue-500 bg-opacity-20 text-blue-400 rounded-full text-sm">Angular</span>
+                        <span class="px-3 py-1 bg-blue-500 bg-opacity-20 text-blue-400 rounded-full text-sm">Node.js</span>
+                        <span class="px-3 py-1 bg-blue-500 bg-opacity-20 text-blue-400 rounded-full text-sm">MongoDB</span>
+                    </div>
+                    <a href="https://github.com/jjosinoms/Agendamento" target="_blank" class="mat-button inline-flex items-center text-blue-400 hover:text-blue-300 transition">
+                        <i class="material-icons mr-2">code</i>
+                        Ver no GitHub
+                    </a>
+                </div>
+                <div class="project-card mat-card bg-gray-800 p-6 rounded-lg reveal" style="animation-delay: 0.4s;">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="VTAngular" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-bold text-blue-400 mb-2">VTAngular</h3>
+                    <p class="text-gray-300 mb-4">Projeto de gestão de vendas e tarefas, desenvolvido com Angular para o front-end e Node.js no back-end.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-blue-500 bg-opacity-20 text-blue-400 rounded-full text-sm">Angular</span>
+                        <span class="px-3 py-1 bg-blue-500 bg-opacity-20 text-blue-400 rounded-full text-sm">Node.js</span>
+                        <span class="px-3 py-1 bg-blue-500 bg-opacity-20 text-blue-400 rounded-full text-sm">Express</span>
+                    </div>
+                    <a href="https://github.com/jjosinoms/VTAngular" target="_blank" class="mat-button inline-flex items-center text-blue-400 hover:text-blue-300 transition">
+                        <i class="material-icons mr-2">code</i>
+                        Ver no GitHub
+                    </a>
+                </div>
+                <div class="project-card mat-card bg-gray-800 p-6 rounded-lg reveal" style="animation-delay: 0.5s;">
+                    <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Diario de Bordo" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-bold text-blue-400 mb-2">Diario de Bordo</h3>
+                    <p class="text-gray-300 mb-4">Aplicação para registro e acompanhamento de atividades diárias, facilitando o controle de tarefas e produtividade.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-blue-500 bg-opacity-20 text-blue-400 rounded-full text-sm">React</span>
+                        <span class="px-3 py-1 bg-blue-500 bg-opacity-20 text-blue-400 rounded-full text-sm">Node.js</span>
+                        <span class="px-3 py-1 bg-blue-500 bg-opacity-20 text-blue-400 rounded-full text-sm">MongoDB</span>
+                    </div>
+                    <a href="https://github.com/jjosinoms/DiarioDeBordo" target="_blank" class="mat-button inline-flex items-center text-blue-400 hover:text-blue-300 transition">
+                        <i class="material-icons mr-2">code</i>
+                        Ver no GitHub
+                    </a>
                 </div>
             </div>
         </div>
