@@ -28,9 +28,11 @@ body {
 
 /* Gradientes e efeitos */
 .gradient-text {
-    background: linear-gradient(45deg, #3B82F6, #8B5CF6);
+    background: linear-gradient(90deg, #3B82F6 0%, #8B5CF6 50%, #EC4899 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
 }
 
 /* Cards com efeito de vidro */
@@ -466,4 +468,238 @@ a:hover::after {
         width: 100%;
         margin-bottom: 1rem;
     }
+} 
+
+/* Saudação animada */
+.animate-bounce {
+    display: inline-block;
+    animation: bounce 1.2s infinite;
+}
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Glassmorphism aprimorado para cards */
+.glass-card, .mat-card, .contact-card, .social-card {
+    background: rgba(40, 40, 60, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1.5px solid rgba(255,255,255,0.13);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.25);
+    border-radius: 1.5rem;
+}
+
+/* Efeito de brilho ao passar o mouse nos cards */
+.glass-card:hover, .mat-card:hover, .contact-card:hover, .social-card:hover {
+    box-shadow: 0 12px 40px 0 rgba(59,130,246,0.18), 0 1.5px 10px 0 rgba(139,92,246,0.10);
+    border-color: #8B5CF6;
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+/* Botões com gradiente e microanimação */
+.mat-raised-button, .mat-stroked-button {
+    background: linear-gradient(90deg, #3B82F6 0%, #8B5CF6 100%);
+    color: #fff !important;
+    border: none;
+    box-shadow: 0 3px 10px rgba(59,130,246,0.10);
+    transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+}
+.mat-raised-button:hover, .mat-stroked-button:hover {
+    transform: scale(1.05) translateY(-2px);
+    background: linear-gradient(90deg, #8B5CF6 0%, #3B82F6 100%);
+    box-shadow: 0 6px 20px rgba(139,92,246,0.15);
+}
+
+/* Links com sublinhado animado e cor vibrante */
+a {
+    color: #60A5FA;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.2s;
+}
+a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -2px;
+    background: linear-gradient(90deg, #3B82F6, #8B5CF6);
+    transition: width 0.3s;
+}
+a:hover {
+    color: #EC4899;
+}
+a:hover::after {
+    width: 100%;
+}
+
+/* Rodapé estilizado */
+footer {
+    letter-spacing: 0.5px;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 -2px 16px 0 rgba(59,130,246,0.10);
+}
+
+/* Responsividade aprimorada para saudação e rodapé */
+@media (max-width: 600px) {
+    .gradient-text, .fade-in, footer p {
+        font-size: 1rem !important;
+    }
+    .mat-card, .glass-card {
+        padding: 1rem !important;
+    }
+} 
+
+/* Navbar fixa e links */
+.nav-link {
+  color: #e5e7eb;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  transition: background 0.2s, color 0.2s;
+}
+.nav-link:hover {
+  background: linear-gradient(90deg, #3B82F6 0%, #8B5CF6 100%);
+  color: #fff;
+}
+
+/* Hero avatar */
+.avatar img {
+  box-shadow: 0 8px 32px 0 rgba(59,130,246,0.18);
+  border-radius: 50%;
+  border: 4px solid #3B82F6;
+  background: #fff;
+}
+
+/* Hero section */
+.hero-section {
+  background: linear-gradient(120deg, #232946 60%, #3B82F6 100%);
+  min-height: 80vh;
+}
+
+/* Cards e glassmorphism */
+.glass-card, .mat-card, .contact-card, .social-card, .project-card {
+  background: rgba(40, 40, 60, 0.8);
+  backdrop-filter: blur(14px);
+  border: 1.5px solid rgba(255,255,255,0.10);
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.18);
+  border-radius: 1.5rem;
+  transition: box-shadow 0.3s, border-color 0.3s, transform 0.2s;
+}
+.glass-card:hover, .mat-card:hover, .contact-card:hover, .social-card:hover, .project-card:hover {
+  box-shadow: 0 12px 40px 0 rgba(59,130,246,0.18), 0 1.5px 10px 0 rgba(139,92,246,0.10);
+  border-color: #8B5CF6;
+  transform: translateY(-4px) scale(1.03);
+}
+
+/* Projetos grid */
+.project-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+.project-link {
+  color: #60A5FA;
+  transition: color 0.2s, transform 0.2s;
+}
+.project-link:hover {
+  color: #EC4899;
+  transform: scale(1.15);
+}
+
+/* Timeline experiência */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .timeline {
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+
+/* Barras de habilidades */
+.skill-bar {
+  height: 10px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 0.25rem;
+}
+.skill-progress {
+  height: 100%;
+  background: linear-gradient(90deg, #3B82F6, #8B5CF6);
+  border-radius: 6px;
+  transition: width 1s cubic-bezier(.4,0,.2,1);
+}
+
+/* Soft skills cards */
+.soft-skill-card {
+  background: rgba(59,130,246,0.08);
+  border-left: 4px solid #8B5CF6;
+  border-radius: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.soft-skill-card:hover {
+  border-color: #EC4899;
+  box-shadow: 0 2px 12px 0 rgba(236,72,153,0.10);
+}
+.soft-skill-title {
+  font-size: 1.1rem;
+}
+
+/* Social cards */
+.social-card {
+  background: linear-gradient(145deg, #232946 80%, #3B82F6 100%);
+  border: 1.5px solid rgba(59,130,246,0.13);
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 16px 0 rgba(59,130,246,0.10);
+  transition: box-shadow 0.3s, border-color 0.3s, transform 0.2s;
+}
+.social-card:hover {
+  border-color: #8B5CF6;
+  box-shadow: 0 8px 32px 0 rgba(139,92,246,0.13);
+  transform: translateY(-2px) scale(1.04);
+}
+.social-icon {
+  transition: transform 0.2s, filter 0.2s;
+}
+.social-icon:hover {
+  transform: scale(1.15);
+  filter: brightness(1.2);
+}
+
+/* Rodapé estilizado */
+footer {
+  letter-spacing: 0.5px;
+  font-family: 'Roboto', sans-serif;
+  box-shadow: 0 -2px 16px 0 rgba(59,130,246,0.10);
+}
+
+/* Responsividade geral */
+@media (max-width: 900px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .hero-section {
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+  }
+}
+@media (max-width: 600px) {
+  .gradient-text, .fade-in, footer p {
+    font-size: 1rem !important;
+  }
+  .mat-card, .glass-card, .project-card {
+    padding: 1rem !important;
+  }
+  .avatar img {
+    width: 96px;
+    height: 96px;
+  }
 } 

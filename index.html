@@ -4,171 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jonas Josino - Desenvolvedor Full Stack</title>
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f4bb.png">
-    <!-- Meta tags sociais -->
-    <meta property="og:title" content="Jonas Josino - Desenvolvedor Full Stack">
-    <meta property="og:description" content="Transformando ideias em soluções digitais inovadoras. Portfólio de Jonas Josino, desenvolvedor full stack.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://seusite.com">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Jonas Josino - Desenvolvedor Full Stack">
-    <meta name="twitter:description" content="Transformando ideias em soluções digitais inovadoras. Portfólio de Jonas Josino, desenvolvedor full stack.">
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80">
-    <!-- Angular Material -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/@angular/material@15.2.9/prebuilt-themes/indigo-pink.css" rel="stylesheet">
-    <!-- Bootstrap e Tailwind -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <meta name="description" content="Portfólio de Jonas Josino, desenvolvedor full stack. Transformando ideias em soluções digitais inovadoras.">
-    <meta name="robots" content="index, follow">
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        /* Animações suaves de entrada */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: opacity 0.8s ease, transform 0.8s cubic-bezier(.4,0,.2,1);
-        }
-        .fade-in.visible {
-            opacity: 1;
-            transform: none;
-        }
-        /* Contraste melhorado para textos secundários */
-        .text-gray-200, .text-gray-300 {
-            color: #e5e7eb !important;
-        }
-        /* Ajuste para links acessíveis */
-        a:focus, button:focus {
-            outline: 2px solid #2563eb;
-            outline-offset: 2px;
-        }
-        /* Botão voltar ao topo */
-        #backToTop {
-            display: none;
-        }
-        #backToTop.show {
-            display: block;
-        }
-        /* Animação de hover nos cards de projeto */
-        .projeto-card {
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .projeto-card:hover {
-            transform: translateY(-8px) scale(1.03);
-            box-shadow: 0 8px 32px 0 rgba(0,0,0,0.25);
-        }
-    </style>
 </head>
 <body class="bg-gray-900 text-white">
-    <!-- Navbar com Material Design -->
-    <nav role="navigation" class="fixed w-full bg-gray-800 bg-opacity-90 backdrop-blur-sm z-50 mat-elevation-z4">
-        <div class="container mx-auto px-4 py-3">
-            <div class="flex justify-between items-center">
-                <a href="#" class="text-2xl font-bold text-blue-400 material-icons" aria-label="Página inicial">code</a>
-                <div class="hidden md:flex space-x-6">
-                    <a href="#sobre" class="hover:text-blue-400 transition mat-button" aria-label="Ir para Sobre">Sobre</a>
-                    <a href="#experiencia" class="hover:text-blue-400 transition mat-button" aria-label="Ir para Experiência">Experiência</a>
-                    <a href="#projetos" class="hover:text-blue-400 transition mat-button" aria-label="Ir para Projetos">Projetos</a>
-                    <a href="#habilidades" class="hover:text-blue-400 transition mat-button" aria-label="Ir para Habilidades">Habilidades</a>
-                    <a href="#contato" class="hover:text-blue-400 transition mat-button" aria-label="Ir para Contato">Contato</a>
-                </div>
-                <!-- Toggle dark/light mode -->
-                <button id="toggleTheme" aria-label="Alternar tema" class="ml-4 text-xl bg-transparent border-0 focus:outline-none">
-                    <i class="fas fa-moon"></i>
-                </button>
+    <!-- Navbar fixa -->
+    <nav class="fixed w-full bg-gray-900 bg-opacity-90 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <span class="text-2xl font-bold gradient-text">Jonas Josino</span>
+            <div class="hidden md:flex space-x-8">
+                <a href="#sobre" class="nav-link">Sobre</a>
+                <a href="#experiencia" class="nav-link">Experiência</a>
+                <a href="#projetos" class="nav-link">Projetos</a>
+                <a href="#habilidades" class="nav-link">Habilidades</a>
+                <a href="#contato" class="nav-link">Contato</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section com Material Design -->
-    <section class="min-h-screen flex items-center justify-center relative overflow-hidden"
-         style="background-image: url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center;">
-        <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-60"></div>
-        <div class="container mx-auto px-4 relative z-10 flex justify-center">
-            <div class="fade-in backdrop-blur-md bg-black/95 border border-white/20 rounded-2xl shadow-2xl p-10 max-w-2xl w-full text-center">
-                <h1 class="text-5xl md:text-7xl font-bold mb-6 animate-fade-in text-white drop-shadow-lg">
-                    <span id="typed-title"></span>
-                    <span class="block text-3xl md:text-4xl text-blue-400 mt-2">Desenvolvedor Full Stack</span>
-                </h1>
-                <p class="text-xl md:text-2xl mb-8 text-gray-200 drop-shadow">Transformando ideias em soluções digitais inovadoras</p>
-                <div class="flex justify-center space-x-4">
-                    <a href="#contato" class="mat-raised-button bg-white text-blue-600 hover:bg-blue-100 px-8 py-3 rounded-full font-bold transition shadow" aria-label="Entre em Contato">
-                        Entre em Contato
-                    </a>
-                    <a href="#projetos" class="mat-stroked-button border border-white text-white hover:bg-blue-600 hover:text-white px-8 py-3 rounded-full font-bold transition shadow" aria-label="Ver Projetos">
-                        Ver Projetos
-                    </a>
-                </div>
-            </div>
+    <!-- HERO -->
+    <section class="hero-section min-h-screen flex flex-col items-center justify-center text-center pt-24 pb-12">
+        <div class="avatar mb-6">
+            <img src="https://avatars.githubusercontent.com/u/9919?s=200&v=4" alt="Avatar" class="rounded-full shadow-xl border-4 border-blue-500 w-36 h-36 object-cover mx-auto">
+        </div>
+        <h1 class="text-5xl md:text-6xl font-extrabold gradient-text mb-2 animate-fade-in">Olá, eu sou o Jonas 👋</h1>
+        <h2 class="text-2xl md:text-3xl font-semibold text-blue-400 mb-6 animate-fade-in">Desenvolvedor Full Stack</h2>
+        <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto animate-fade-in">Transformando ideias em soluções digitais inovadoras com paixão, criatividade e tecnologia de ponta.</p>
+        <div class="flex flex-col md:flex-row gap-4 justify-center animate-fade-in">
+            <a href="#contato" class="mat-raised-button px-8 py-3 rounded-full font-bold">Entre em Contato</a>
+            <a href="#projetos" class="mat-stroked-button px-8 py-3 rounded-full font-bold">Ver Projetos</a>
         </div>
     </section>
 
-    <!-- Sobre Section com Material Cards -->
-    <section id="sobre" class="py-20 bg-gray-800 fade-in">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold mb-12 text-center">Sobre Mim</h2>
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="space-y-6">
-                    <p class="text-lg text-gray-200">
-                        Desenvolvedor Full Stack com vasta experiência em criação e integração de sistemas escaláveis.
-                        Especializado em tecnologias modernas como Angular, Next.js, Node.js e TypeScript.
-                    </p>
-                    <p class="text-lg text-gray-200">
-                        Comprometido com soluções ágeis e eficientes, sempre focando em performance, escalabilidade
-                        e experiência do usuário.
-                    </p>
+    <!-- SOBRE -->
+    <section id="sobre" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+            <div class="flex-1">
+                <div class="glass-card p-8 mb-6">
+                    <h2 class="text-3xl font-bold mb-4 gradient-text">Sobre Mim</h2>
+                    <p class="text-lg text-gray-200 mb-2">Sou desenvolvedor full stack com experiência em sistemas escaláveis, apaixonado por resolver problemas e criar experiências digitais marcantes.</p>
+                    <p class="text-lg text-gray-200">Especialista em Angular, Next.js, Node.js, TypeScript e sempre aprendendo novas tecnologias.</p>
                 </div>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="mat-card bg-gray-700 p-6 rounded-lg">
-                        <h3 class="text-xl font-bold mb-2">Front-end</h3>
-                        <ul class="text-gray-200">
-                            <li class="flex items-center">
-                                <span class="material-icons mr-2 text-blue-400" aria-hidden="true">code</span>
-                                Angular
-                            </li>
-                            <li class="flex items-center">
-                                <span class="material-icons mr-2 text-blue-400" aria-hidden="true">web</span>
-                                Next.js
-                            </li>
-                            <li class="flex items-center">
-                                <span class="material-icons mr-2 text-blue-400" aria-hidden="true">html</span>
-                                HTML/CSS
-                            </li>
-                            <li class="flex items-center">
-                                <span class="material-icons mr-2 text-blue-400" aria-hidden="true">javascript</span>
-                                JavaScript
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="mat-card bg-gray-700 p-6 rounded-lg">
-                        <h3 class="text-xl font-bold mb-2">Back-end</h3>
-                        <ul class="text-gray-200">
-                            <li class="flex items-center">
-                                <span class="material-icons mr-2 text-blue-400" aria-hidden="true">storage</span>
-                                Node.js
-                            </li>
-                            <li class="flex items-center">
-                                <span class="material-icons mr-2 text-blue-400" aria-hidden="true">code</span>
-                                TypeScript
-                            </li>
-                            <li class="flex items-center">
-                                <span class="material-icons mr-2 text-blue-400" aria-hidden="true">php</span>
-                                PHP
-                            </li>
-                            <li class="flex items-center">
-                                <span class="material-icons mr-2 text-blue-400" aria-hidden="true">terminal</span>
-                                Python
-                            </li>
-                        </ul>
-                    </div>
+            </div>
+            <div class="flex-1 grid grid-cols-2 gap-4">
+                <div class="mat-card p-6 flex flex-col items-center">
+                    <span class="material-icons text-4xl text-blue-400 mb-2">code</span>
+                    <h3 class="text-xl font-bold mb-2">Front-end</h3>
+                    <ul class="text-gray-200 text-center">
+                        <li>Angular</li>
+                        <li>Next.js</li>
+                        <li>HTML/CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+                <div class="mat-card p-6 flex flex-col items-center">
+                    <span class="material-icons text-4xl text-blue-400 mb-2">storage</span>
+                    <h3 class="text-xl font-bold mb-2">Back-end</h3>
+                    <ul class="text-gray-200 text-center">
+                        <li>Node.js</li>
+                        <li>TypeScript</li>
+                        <li>PHP</li>
+                        <li>Python</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -179,141 +80,219 @@
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold mb-12 text-center">Experiência Profissional</h2>
             <div class="space-y-8">
-                <!-- Experiência items serão adicionados via JavaScript -->
+                <div class="mat-card bg-gray-800 p-6 rounded-lg reveal" style="animation-delay: 0s;">
+                    <h3 class="text-2xl font-bold text-blue-400">Maxxi Automação</h3>
+                    <p class="text-lg text-gray-300">Auxiliar de Informática</p>
+                    <p class="text-sm text-gray-400 mb-4">04/2025 - 06/2025</p>
+                    <ul class="list-disc list-inside text-gray-300">
+                        <li>Instalação e configuração de balanças comerciais (Prix 5 Plus, Prix 4 Duo, Prix 4 Uno, Prix 3, Thunder)</li>
+                        <li>Suporte técnico e configuração de rede para integração com software</li>
+                        <li>Diagnóstico e resolução de problemas técnicos</li>
+                    </ul>
+                </div>
+                <div class="mat-card bg-gray-800 p-6 rounded-lg reveal" style="animation-delay: 0.1s;">
+                    <h3 class="text-2xl font-bold text-blue-400">Datamétrica</h3>
+                    <p class="text-lg text-gray-300">Operador de Telemarketing</p>
+                    <p class="text-sm text-gray-400 mb-4">03/2025 - 04/2025</p>
+                    <ul class="list-disc list-inside text-gray-300">
+                        <li>Atendimento receptivo a clientes do setor bancário</li>
+                        <li>Suporte e esclarecimento de dúvidas sobre serviços financeiros</li>
+                        <li>Resolução de demandas e encaminhamento para setores responsáveis</li>
+                    </ul>
+                </div>
+                <div class="mat-card bg-gray-800 p-6 rounded-lg reveal" style="animation-delay: 0.2s;">
+                    <h3 class="text-2xl font-bold text-blue-400">Andreia Seguros</h3>
+                    <p class="text-lg text-gray-300">Desenvolvedor Freelancer</p>
+                    <p class="text-sm text-gray-400 mb-4">12/2024 - 01/2025</p>
+                    <ul class="list-disc list-inside text-gray-300">
+                        <li>Desenvolvimento de landing pages otimizadas com Node.js e Angular</li>
+                        <li>Implementação de SEO avançado, aumentando o tráfego em 25%</li>
+                        <li>Integração de APIs para automação de processos</li>
+                    </ul>
+                </div>
+                <div class="mat-card bg-gray-800 p-6 rounded-lg reveal" style="animation-delay: 0.3s;">
+                    <h3 class="text-2xl font-bold text-blue-400">Valeria Psi</h3>
+                    <p class="text-lg text-gray-300">Desenvolvedor Freelancer</p>
+                    <p class="text-sm text-gray-400 mb-4">11/2024 - 12/2024</p>
+                    <ul class="list-disc list-inside text-gray-300">
+                        <li>Criação de landing page responsiva e otimizada para velocidade</li>
+                        <li>Melhorias na experiência do usuário e maior retenção no site</li>
+                    </ul>
+                </div>
+                <div class="mat-card bg-gray-800 p-6 rounded-lg reveal" style="animation-delay: 0.4s;">
+                    <h3 class="text-2xl font-bold text-blue-400">BZ Fisio Pélvica</h3>
+                    <p class="text-lg text-gray-300">Desenvolvedor Freelancer</p>
+                    <p class="text-sm text-gray-400 mb-4">01/2021 - 02/2021</p>
+                    <ul class="list-disc list-inside text-gray-300">
+                        <li>Desenvolvimento e manutenção de sistemas utilizando Next.js e SQL</li>
+                        <li>Implementação de soluções web para aprimoramento da experiência do usuário</li>
+                    </ul>
+                </div>
+                <div class="mat-card bg-gray-800 p-6 rounded-lg reveal" style="animation-delay: 0.5s;">
+                    <h3 class="text-2xl font-bold text-blue-400">Impacto Inteligência Artificial</h3>
+                    <p class="text-lg text-gray-300">Estagiário</p>
+                    <p class="text-sm text-gray-400 mb-4">09/2020 - 01/2021</p>
+                    <ul class="list-disc list-inside text-gray-300">
+                        <li>Automação de processos, reduzindo custos operacionais em 15%</li>
+                        <li>Desenvolvimento de sistemas para melhoria da eficiência operacional</li>
+                    </ul>
+                </div>
+                <div class="mat-card bg-gray-800 p-6 rounded-lg reveal" style="animation-delay: 0.6s;">
+                    <h3 class="text-2xl font-bold text-blue-400">Construmet Soluções Metálicas de Engenharia</h3>
+                    <p class="text-lg text-gray-300">Desenvolvedor Freelancer</p>
+                    <p class="text-sm text-gray-400 mb-4">01/2020 - 06/2020</p>
+                    <ul class="list-disc list-inside text-gray-300">
+                        <li>Desenvolvimento de site profissional para a empresa</li>
+                        <li>Implementação de sistema de login com OAuth2 e Django All-Auth</li>
+                        <li>Autenticação via Google, Facebook e servidor próprio</li>
+                    </ul>
+                </div>
+                <div class="mat-card bg-gray-800 p-6 rounded-lg reveal" style="animation-delay: 0.7s;">
+                    <h3 class="text-2xl font-bold text-blue-400">Radix Engenharia e Software</h3>
+                    <p class="text-lg text-gray-300">Estagiário</p>
+                    <p class="text-sm text-gray-400 mb-4">08/2018 - 12/2019</p>
+                    <ul class="list-disc list-inside text-gray-300">
+                        <li>Participação na elaboração de projetos para grandes empresas</li>
+                        <li>Utilização de .NET Framework, .NET Core, Angular, PHP, Azure</li>
+                    </ul>
+                </div>
+                <div class="mat-card bg-gray-800 p-6 rounded-lg reveal" style="animation-delay: 0.8s;">
+                    <h3 class="text-2xl font-bold text-blue-400">WJ Informática</h3>
+                    <p class="text-lg text-gray-300">Estagiário</p>
+                    <p class="text-sm text-gray-400 mb-4">11/2017 - 05/2018</p>
+                    <ul class="list-disc list-inside text-gray-300">
+                        <li>Auxílio no suporte técnico e desenvolvimento de sistemas</li>
+                        <li>Conhecimento adquirido em Python, Django, Groovy e Grails</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Projetos Section com Material Cards -->
-    <section id="projetos" class="py-20 bg-gray-800 fade-in">
+    <!-- PROJETOS -->
+    <section id="projetos" class="py-20 bg-gray-800">
         <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold mb-12 text-center">Projetos</h2>
+            <h2 class="text-3xl font-bold mb-12 text-center gradient-text">Projetos em Destaque</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Cards de projetos serão adicionados via JavaScript -->
+                <div class="project-card glass-card p-6 flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80" alt="Projeto 1" class="rounded-lg mb-4 shadow-md">
+                    <h3 class="text-xl font-bold mb-2">Projeto Incrível</h3>
+                    <div class="flex flex-wrap gap-2 mb-2">
+                        <span class="px-2 py-1 bg-blue-600 rounded text-xs">Angular</span>
+                        <span class="px-2 py-1 bg-purple-600 rounded text-xs">Node.js</span>
+                    </div>
+                    <p class="text-gray-200 mb-4">Sistema web completo para gestão de tarefas e produtividade.</p>
+                    <div class="flex gap-3 mt-auto">
+                        <a href="#" class="project-link" title="Ver no GitHub"><i class="fab fa-github text-2xl"></i></a>
+                        <a href="#" class="project-link" title="Ver Demo"><i class="fas fa-external-link-alt text-2xl"></i></a>
+                    </div>
+                </div>
+                <div class="project-card glass-card p-6 flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="Projeto 2" class="rounded-lg mb-4 shadow-md">
+                    <h3 class="text-xl font-bold mb-2">App Mobile</h3>
+                    <div class="flex flex-wrap gap-2 mb-2">
+                        <span class="px-2 py-1 bg-blue-600 rounded text-xs">React Native</span>
+                        <span class="px-2 py-1 bg-pink-600 rounded text-xs">Firebase</span>
+                    </div>
+                    <p class="text-gray-200 mb-4">Aplicativo para organização pessoal e lembretes inteligentes.</p>
+                    <div class="flex gap-3 mt-auto">
+                        <a href="#" class="project-link" title="Ver no GitHub"><i class="fab fa-github text-2xl"></i></a>
+                        <a href="#" class="project-link" title="Ver Demo"><i class="fas fa-external-link-alt text-2xl"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Habilidades Section com Material Progress -->
-    <section id="habilidades" class="py-20 fade-in">
+    <!-- HABILIDADES -->
+    <section id="habilidades" class="py-20">
         <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold mb-12 text-center">Habilidades</h2>
+            <h2 class="text-3xl font-bold mb-12 text-center gradient-text">Habilidades</h2>
             <div class="grid md:grid-cols-2 gap-12">
                 <div>
                     <h3 class="text-2xl font-bold mb-6">Habilidades Técnicas</h3>
-                    <div id="habilidades-tecnicas" class="space-y-4">
-                        <!-- Skills técnicas serão adicionadas via JavaScript -->
+                    <div class="space-y-4">
+                        <div>
+                            <span class="font-semibold">Angular</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                        </div>
+                        <div>
+                            <span class="font-semibold">Node.js</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                        </div>
+                        <div>
+                            <span class="font-semibold">TypeScript</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                        </div>
+                        <div>
+                            <span class="font-semibold">React</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 75%"></div></div>
+                        </div>
                     </div>
                 </div>
                 <div>
                     <h3 class="text-2xl font-bold mb-6">Soft Skills</h3>
-                    <div id="habilidades-soft" class="space-y-4">
-                        <!-- Soft skills serão adicionadas via JavaScript -->
+                    <div class="grid gap-4">
+                        <div class="soft-skill-card p-4 flex items-center gap-3">
+                            <span class="material-icons text-blue-400">emoji_objects</span>
+                            <span class="soft-skill-title font-semibold">Criatividade</span>
+                        </div>
+                        <div class="soft-skill-card p-4 flex items-center gap-3">
+                            <span class="material-icons text-blue-400">groups</span>
+                            <span class="soft-skill-title font-semibold">Trabalho em equipe</span>
+                        </div>
+                        <div class="soft-skill-card p-4 flex items-center gap-3">
+                            <span class="material-icons text-blue-400">psychology</span>
+                            <span class="soft-skill-title font-semibold">Resolução de problemas</span>
+                        </div>
+                        <div class="soft-skill-card p-4 flex items-center gap-3">
+                            <span class="material-icons text-blue-400">public</span>
+                            <span class="soft-skill-title font-semibold">Comunicação</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contato Section com Material Cards -->
-    <section id="contato" class="py-20 bg-gray-800 fade-in">
+    <!-- CONTATO -->
+    <section id="contato" class="py-20 bg-gray-800">
         <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold mb-12 text-center">Entre em Contato</h2>
-            <div class="max-w-4xl mx-auto">
-                <div class="grid md:grid-cols-3 gap-8 mb-12">
-                    <div class="mat-card text-center bg-gray-700 p-6 rounded-lg hover:bg-gray-600 transition">
-                        <i class="material-icons text-4xl text-blue-400 mb-4" aria-hidden="true">email</i>
-                        <p class="text-lg text-gray-200">jjosinoms@gmail.com</p>
-                    </div>
-                    <div class="mat-card text-center bg-gray-700 p-6 rounded-lg hover:bg-gray-600 transition">
-                        <i class="material-icons text-4xl text-blue-400 mb-4" aria-hidden="true">phone</i>
-                        <p class="text-lg text-gray-200">(21) 98630-0507</p>
-                    </div>
-                    <div class="mat-card text-center bg-gray-700 p-6 rounded-lg hover:bg-gray-600 transition">
-                        <i class="material-icons text-4xl text-blue-400 mb-4" aria-hidden="true">location_on</i>
-                        <p class="text-lg text-gray-200">Rio de Janeiro, RJ</p>
-                    </div>
+            <h2 class="text-3xl font-bold mb-12 text-center gradient-text">Entre em Contato</h2>
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="contact-card text-center p-6">
+                    <i class="material-icons text-4xl text-blue-400 mb-4 contact-icon">email</i>
+                    <p class="text-lg text-gray-200">jjosinoms@gmail.com</p>
                 </div>
-                
-                <div class="grid md:grid-cols-2 gap-8">
-                    <a href="https://www.linkedin.com/in/jonas-josino-b5064257/" target="_blank" 
-                       class="mat-card bg-gray-700 p-8 rounded-lg hover:bg-gray-600 transition group" aria-label="LinkedIn Jonas Josino">
-                        <div class="flex items-center justify-center mb-4">
-                            <i class="fab fa-linkedin text-5xl text-blue-400 group-hover:scale-110 transition" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-center mb-2">LinkedIn</h3>
-                        <p class="text-gray-200 text-center">Conecte-se comigo no LinkedIn para networking profissional e oportunidades de trabalho</p>
-                    </a>
-                    
-                    <a href="https://github.com/jjosinoms" target="_blank" 
-                       class="mat-card bg-gray-700 p-8 rounded-lg hover:bg-gray-600 transition group" aria-label="GitHub Jonas Josino">
-                        <div class="flex items-center justify-center mb-4">
-                            <i class="fab fa-github text-5xl text-blue-400 group-hover:scale-110 transition" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-center mb-2">GitHub</h3>
-                        <p class="text-gray-200 text-center">Explore meus projetos e contribuições no GitHub</p>
-                    </a>
+                <div class="contact-card text-center p-6">
+                    <i class="material-icons text-4xl text-blue-400 mb-4 contact-icon">phone</i>
+                    <p class="text-lg text-gray-200">(21) 98630-0507</p>
                 </div>
+                <div class="contact-card text-center p-6">
+                    <i class="material-icons text-4xl text-blue-400 mb-4 contact-icon">location_on</i>
+                    <p class="text-lg text-gray-200">Rio de Janeiro, RJ</p>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row gap-8 justify-center">
+                <a href="https://www.linkedin.com/in/jonas-josino-b5064257/" target="_blank" class="social-card p-8 flex flex-col items-center group">
+                    <i class="fab fa-linkedin text-5xl text-blue-400 mb-2 group-hover:scale-110 transition social-icon"></i>
+                    <span class="font-bold text-xl">LinkedIn</span>
+                </a>
+                <a href="https://github.com/jjosinoms" target="_blank" class="social-card p-8 flex flex-col items-center group">
+                    <i class="fab fa-github text-5xl text-blue-400 mb-2 group-hover:scale-110 transition social-icon"></i>
+                    <span class="font-bold text-xl">GitHub</span>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Botão voltar ao topo -->
-    <button id="backToTop" aria-label="Voltar ao topo"
-      class="fixed bottom-6 right-6 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-800 transition z-50">
-      <i class="fas fa-arrow-up"></i>
-    </button>
+    <!-- Rodapé -->
+    <footer class="w-full bg-gradient-to-r from-blue-700 via-purple-700 to-blue-700 text-center py-6 mt-12 shadow-lg fade-in">
+        <p class="text-lg font-semibold text-white drop-shadow">“Transformando ideias em soluções digitais com paixão e criatividade!”</p>
+        <p class="text-sm text-gray-200 mt-2">&copy; 2024 Jonas Josino. Feito com <span class="text-pink-400">&#10084;&#65039;</span> e café ☕</p>
+    </footer>
 
     <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/@angular/material@15.2.9/bundles/material.umd.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Animação de fade-in ao rolar a página
-        document.addEventListener("DOMContentLoaded", function () {
-            function revealOnScroll() {
-                document.querySelectorAll('.fade-in').forEach(function (el) {
-                    const rect = el.getBoundingClientRect();
-                    if (rect.top < window.innerHeight - 60) {
-                        el.classList.add('visible');
-                    }
-                });
-            }
-            revealOnScroll();
-            window.addEventListener('scroll', revealOnScroll);
-
-            // Botão voltar ao topo
-            const btn = document.getElementById('backToTop');
-            window.addEventListener('scroll', () => {
-                if(window.scrollY > 300) {
-                    btn.classList.add('show');
-                } else {
-                    btn.classList.remove('show');
-                }
-            });
-            btn.onclick = () => window.scrollTo({top:0, behavior:'smooth'});
-
-            // Animação de digitação no título principal
-            const title = "Jonas Josino";
-            let i = 0;
-            function typeWriter() {
-                if (i < title.length) {
-                    document.getElementById("typed-title").innerHTML += title.charAt(i);
-                    i++;
-                    setTimeout(typeWriter, 80);
-                }
-            }
-            typeWriter();
-
-            // Dark/Light mode toggle
-            const toggleTheme = document.getElementById('toggleTheme');
-            toggleTheme.onclick = function() {
-                document.body.classList.toggle('bg-gray-900');
-                document.body.classList.toggle('bg-white');
-                document.body.classList.toggle('text-white');
-                document.body.classList.toggle('text-gray-900');
-            }
-        });
-    </script>
     <script src="script.js"></script>
 </body>
 </html>

@@ -167,89 +167,90 @@ const habilidadesData = {
     ]
 };
 
+// Remover criação dinâmica de experiência e projetos, pois já estão no HTML
 // Função para criar elementos de experiência com Material Design
-function criarExperiencia() {
-    const container = document.querySelector('#experiencia .space-y-8');
-    experienciaData.forEach((exp, index) => {
-        const expElement = document.createElement('div');
-        expElement.className = 'mat-card bg-gray-800 p-6 rounded-lg reveal';
-        expElement.style.animationDelay = `${index * 0.1}s`;
-        expElement.innerHTML = `
-            <h3 class="text-2xl font-bold text-blue-400">${exp.empresa}</h3>
-            <p class="text-lg text-gray-300">${exp.cargo}</p>
-            <p class="text-sm text-gray-400 mb-4">${exp.periodo}</p>
-            <ul class="list-disc list-inside text-gray-300">
-                ${exp.descricao.map(item => `<li>${item}</li>`).join('')}
-            </ul>
-        `;
-        container.appendChild(expElement);
-    });
-}
+// function criarExperiencia() {
+//     const container = document.querySelector('#experiencia .space-y-8');
+//     experienciaData.forEach((exp, index) => {
+//         const expElement = document.createElement('div');
+//         expElement.className = 'mat-card bg-gray-800 p-6 rounded-lg reveal';
+//         expElement.style.animationDelay = `${index * 0.1}s`;
+//         expElement.innerHTML = `
+//             <h3 class="text-2xl font-bold text-blue-400">${exp.empresa}</h3>
+//             <p class="text-lg text-gray-300">${exp.cargo}</p>
+//             <p class="text-sm text-gray-400 mb-4">${exp.periodo}</p>
+//             <ul class="list-disc list-inside text-gray-300">
+//                 ${exp.descricao.map(item => `<li>${item}</li>`).join('')}
+//             </ul>
+//         `;
+//         container.appendChild(expElement);
+//     });
+// }
 
 // Função para criar cards de projetos com Material Design
-function criarProjetos() {
-    const container = document.querySelector('#projetos .grid');
-    projetosData.forEach((projeto, index) => {
-        const projetoElement = document.createElement('div');
-        projetoElement.className = 'project-card mat-card bg-gray-800 p-6 rounded-lg reveal';
-        projetoElement.style.animationDelay = `${index * 0.1}s`;
-        projetoElement.innerHTML = `
-            <img src="${projeto.imagem}" alt="${projeto.nome}" class="w-full h-48 object-cover rounded-lg mb-4">
-            <h3 class="text-xl font-bold text-blue-400 mb-2">${projeto.nome}</h3>
-            <p class="text-gray-300 mb-4">${projeto.descricao}</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-                ${projeto.tecnologias.map(tech => `
-                    <span class="px-3 py-1 bg-blue-500 bg-opacity-20 text-blue-400 rounded-full text-sm">
-                        ${tech}
-                    </span>
-                `).join('')}
-            </div>
-            <a href="${projeto.link}" target="_blank" class="mat-button inline-flex items-center text-blue-400 hover:text-blue-300 transition">
-                <i class="material-icons mr-2">code</i>
-                Ver no GitHub
-            </a>
-        `;
-        container.appendChild(projetoElement);
-    });
-}
+// function criarProjetos() {
+//     const container = document.querySelector('#projetos .grid');
+//     projetosData.forEach((projeto, index) => {
+//         const projetoElement = document.createElement('div');
+//         projetoElement.className = 'project-card mat-card bg-gray-800 p-6 rounded-lg reveal';
+//         projetoElement.style.animationDelay = `${index * 0.1}s`;
+//         projetoElement.innerHTML = `
+//             <img src="${projeto.imagem}" alt="${projeto.nome}" class="w-full h-48 object-cover rounded-lg mb-4">
+//             <h3 class="text-xl font-bold text-blue-400 mb-2">${projeto.nome}</h3>
+//             <p class="text-gray-300 mb-4">${projeto.descricao}</p>
+//             <div class="flex flex-wrap gap-2 mb-4">
+//                 ${projeto.tecnologias.map(tech => `
+//                     <span class="px-3 py-1 bg-blue-500 bg-opacity-20 text-blue-400 rounded-full text-sm">
+//                         ${tech}
+//                     </span>
+//                 `).join('')}
+//             </div>
+//             <a href="${projeto.link}" target="_blank" class="mat-button inline-flex items-center text-blue-400 hover:text-blue-300 transition">
+//                 <i class="material-icons mr-2">code</i>
+//                 Ver no GitHub
+//             </a>
+//         `;
+//         container.appendChild(projetoElement);
+//     });
+// }
 
 // Função para criar barras de habilidades com Material Design
-function criarHabilidades() {
-    const containerTecnicas = document.querySelector('#habilidades-tecnicas');
-    const containerSoft = document.querySelector('#habilidades-soft');
-
-    if (!containerTecnicas || !containerSoft) {
-        console.error('Containers de habilidades não encontrados');
-        return;
-    }
-
-    habilidadesData.tecnicas.forEach((habilidade, index) => {
-        const skillElement = document.createElement('div');
-        skillElement.className = 'reveal';
-        skillElement.style.animationDelay = `${index * 0.1}s`;
-        skillElement.innerHTML = `
-            <div class="flex justify-between mb-2">
-                <span class="text-gray-300">${habilidade.nome}</span>
-                <span class="text-blue-400">${habilidade.nivel}%</span>
-            </div>
-            <div class="skill-bar">
-                <div class="skill-progress" style="width: ${habilidade.nivel}%"></div>
-            </div>
-        `;
-        containerTecnicas.appendChild(skillElement);
-    });
-
-    habilidadesData.soft.forEach((skill, index) => {
-        const skillElement = document.createElement('div');
-        skillElement.className = 'soft-skill-card mat-card bg-gray-800 p-6 rounded-lg reveal';
-        skillElement.style.animationDelay = `${index * 0.1}s`;
-        skillElement.innerHTML = `
-            <h4 class="soft-skill-title text-xl font-bold text-blue-400 mb-2">${skill.nome}</h4>
-            <p class="text-gray-300">${skill.descricao}</p>
-        `;
-        containerSoft.appendChild(skillElement);
-    });
-}
+// function criarHabilidades() {
+//     const containerTecnicas = document.querySelector('#habilidades-tecnicas');
+//     const containerSoft = document.querySelector('#habilidades-soft');
+//
+//     if (!containerTecnicas || !containerSoft) {
+//         console.error('Containers de habilidades não encontrados');
+//         return;
+//     }
+//
+//     habilidadesData.tecnicas.forEach((habilidade, index) => {
+//         const skillElement = document.createElement('div');
+//         skillElement.className = 'reveal';
+//         skillElement.style.animationDelay = `${index * 0.1}s`;
+//         skillElement.innerHTML = `
+//             <div class="flex justify-between mb-2">
+//                 <span class="text-gray-300">${habilidade.nome}</span>
+//                 <span class="text-blue-400">${habilidade.nivel}%</span>
+//             </div>
+//             <div class="skill-bar">
+//                 <div class="skill-progress" style="width: ${habilidade.nivel}%"></div>
+//             </div>
+//         `;
+//         containerTecnicas.appendChild(skillElement);
+//     });
+//
+//     habilidadesData.soft.forEach((skill, index) => {
+//         const skillElement = document.createElement('div');
+//         skillElement.className = 'soft-skill-card mat-card bg-gray-800 p-6 rounded-lg reveal';
+//         skillElement.style.animationDelay = `${index * 0.1}s`;
+//         skillElement.innerHTML = `
+//             <h4 class="soft-skill-title text-xl font-bold text-blue-400 mb-2">${skill.nome}</h4>
+//             <p class="text-gray-300">${skill.descricao}</p>
+//         `;
+//         containerSoft.appendChild(skillElement);
+//     });
+// }
 
 // Função para animar elementos no scroll com Material Design
 function animarNoScroll() {
@@ -267,9 +268,6 @@ function animarNoScroll() {
 
 // Inicialização com Material Design
 document.addEventListener('DOMContentLoaded', () => {
-    criarExperiencia();
-    criarProjetos();
-    criarHabilidades();
     window.addEventListener('scroll', animarNoScroll);
     animarNoScroll(); // Animar elementos visíveis na carga inicial
 
@@ -293,27 +291,4 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => ripple.remove(), 600);
         });
     });
-});
-
-// Menu mobile com Material Design
-const menuButton = document.createElement('button');
-menuButton.className = 'md:hidden text-white p-2 mat-icon-button';
-menuButton.innerHTML = '<i class="material-icons">menu</i>';
-document.querySelector('nav .flex').appendChild(menuButton);
-
-const menuMobile = document.createElement('div');
-menuMobile.className = 'hidden md:hidden absolute top-full left-0 w-full bg-gray-800 p-4 mat-elevation-z4';
-menuMobile.innerHTML = `
-    <div class="flex flex-col space-y-4">
-        <a href="#sobre" class="mat-button hover:text-blue-400 transition">Sobre</a>
-        <a href="#experiencia" class="mat-button hover:text-blue-400 transition">Experiência</a>
-        <a href="#projetos" class="mat-button hover:text-blue-400 transition">Projetos</a>
-        <a href="#habilidades" class="mat-button hover:text-blue-400 transition">Habilidades</a>
-        <a href="#contato" class="mat-button hover:text-blue-400 transition">Contato</a>
-    </div>
-`;
-document.querySelector('nav').appendChild(menuMobile);
-
-menuButton.addEventListener('click', () => {
-    menuMobile.classList.toggle('hidden');
 });
